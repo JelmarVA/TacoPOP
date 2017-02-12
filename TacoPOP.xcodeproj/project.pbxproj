@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		607177B21E50BDBC00E24C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607177B11E50BDBC00E24C3D /* AppDelegate.swift */; };
-		607177B41E50BDBC00E24C3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607177B31E50BDBC00E24C3D /* ViewController.swift */; };
 		607177B71E50BDBC00E24C3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607177B51E50BDBC00E24C3D /* Main.storyboard */; };
 		607177B91E50BDBC00E24C3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607177B81E50BDBC00E24C3D /* Assets.xcassets */; };
 		607177BC1E50BDBC00E24C3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607177BA1E50BDBC00E24C3D /* LaunchScreen.storyboard */; };
+		607177CA1E50BE7600E24C3D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607177C91E50BE7600E24C3D /* MainVC.swift */; };
+		607177CC1E50BF0A00E24C3D /* TacoPOPData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 607177CB1E50BF0A00E24C3D /* TacoPOPData.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		607177AE1E50BDBC00E24C3D /* TacoPOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TacoPOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607177B11E50BDBC00E24C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607177B31E50BDBC00E24C3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607177B61E50BDBC00E24C3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607177B81E50BDBC00E24C3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		607177BB1E50BDBC00E24C3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		607177BD1E50BDBC00E24C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607177C91E50BE7600E24C3D /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		607177CB1E50BF0A00E24C3D /* TacoPOPData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TacoPOPData.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,63 @@
 		607177B01E50BDBC00E24C3D /* TacoPOP */ = {
 			isa = PBXGroup;
 			children = (
-				607177B11E50BDBC00E24C3D /* AppDelegate.swift */,
-				607177B31E50BDBC00E24C3D /* ViewController.swift */,
-				607177B51E50BDBC00E24C3D /* Main.storyboard */,
-				607177B81E50BDBC00E24C3D /* Assets.xcassets */,
-				607177BA1E50BDBC00E24C3D /* LaunchScreen.storyboard */,
-				607177BD1E50BDBC00E24C3D /* Info.plist */,
+				607177C51E50BDE200E24C3D /* Model */,
+				607177C41E50BDDD00E24C3D /* View */,
+				607177C31E50BDD700E24C3D /* Controller */,
+				607177C61E50BDEA00E24C3D /* Recourses */,
+				607177C81E50BDFE00E24C3D /* Extensions */,
+				607177C71E50BDF800E24C3D /* Protocols */,
 			);
 			path = TacoPOP;
+			sourceTree = "<group>";
+		};
+		607177C31E50BDD700E24C3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				607177B11E50BDBC00E24C3D /* AppDelegate.swift */,
+				607177C91E50BE7600E24C3D /* MainVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		607177C41E50BDDD00E24C3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				607177B51E50BDBC00E24C3D /* Main.storyboard */,
+				607177BA1E50BDBC00E24C3D /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		607177C51E50BDE200E24C3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		607177C61E50BDEA00E24C3D /* Recourses */ = {
+			isa = PBXGroup;
+			children = (
+				607177B81E50BDBC00E24C3D /* Assets.xcassets */,
+				607177BD1E50BDBC00E24C3D /* Info.plist */,
+				607177CB1E50BF0A00E24C3D /* TacoPOPData.csv */,
+			);
+			name = Recourses;
+			sourceTree = "<group>";
+		};
+		607177C71E50BDF800E24C3D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		607177C81E50BDFE00E24C3D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607177BC1E50BDBC00E24C3D /* LaunchScreen.storyboard in Resources */,
+				607177CC1E50BF0A00E24C3D /* TacoPOPData.csv in Resources */,
 				607177B91E50BDBC00E24C3D /* Assets.xcassets in Resources */,
 				607177B71E50BDBC00E24C3D /* Main.storyboard in Resources */,
 			);
@@ -137,8 +189,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607177B41E50BDBC00E24C3D /* ViewController.swift in Sources */,
 				607177B21E50BDBC00E24C3D /* AppDelegate.swift in Sources */,
+				607177CA1E50BE7600E24C3D /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
