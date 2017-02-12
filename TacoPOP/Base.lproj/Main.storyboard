@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTO-Of-6f7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTO-Of-6f7" customClass="HeaderView" customModule="TacoPOP" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Taco-POP" translatesAutoresizingMaskIntoConstraints="NO" id="y1S-2A-k23">
@@ -39,18 +40,37 @@
                                     <constraint firstAttribute="height" constant="80" id="Rbv-ci-BZB"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ses-Kh-SYZ">
+                                <rect key="frame" x="20" y="100" width="374" height="616"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zjk-pa-yHq">
+                                    <size key="itemSize" width="117" height="117"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KTO-Of-6f7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gak-cK-NLz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ses-Kh-SYZ" secondAttribute="trailing" id="Kb6-26-xeb"/>
+                            <constraint firstItem="Ses-Kh-SYZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Teh-wW-9yw"/>
                             <constraint firstAttribute="trailing" secondItem="KTO-Of-6f7" secondAttribute="trailing" id="fsf-0A-Dqb"/>
+                            <constraint firstItem="Ses-Kh-SYZ" firstAttribute="top" secondItem="KTO-Of-6f7" secondAttribute="bottom" constant="20" id="h6p-E4-q2M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ses-Kh-SYZ" secondAttribute="bottom" constant="20" id="k1n-YG-SkA"/>
                             <constraint firstItem="KTO-Of-6f7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="o5R-Pv-slY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Ses-Kh-SYZ" id="dgT-Kj-RPE"/>
+                        <outlet property="headerView" destination="KTO-Of-6f7" id="yhc-FR-4CF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="117.39130434782609" y="122.28260869565219"/>
         </scene>
     </scenes>
     <resources>
